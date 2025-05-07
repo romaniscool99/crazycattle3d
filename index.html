@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crazy Cattle 3D</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: url('https://femboys.lat/uploads/1746308092544.png'), auto;
+    }
+
+    a, button, .control-button {
+      cursor: url('https://femboys.lat/uploads/1746308172968.png'), pointer;
+    }
+
+    iframe {
+      width: 80%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .control-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .control-button:hover {
+      background-color: #555;
+    }
+
+    /* Themes */
+    .theme-dark {
+      background-color: #121212;
+      color: white;
+    }
+
+    .theme-light {
+      background-color: #f5f5f5;
+      color: #111;
+    }
+
+    .frogie {
+      background-color: #0f0f0f;
+      color: #5cffa6;
+    }
+
+    .szvy {
+      background-color: #570000;
+      color: #ffffff;
+    }
+
+    .hyper {
+      background-color: #464646;
+      color: #ce00ec;
+    }
+
+    .solov1 {
+      background-color: #000000;
+      color: #00ff4d;
+    }
+    <div id="particles-js"></div>
+  </style>
+  <script>
+    // Apply saved theme
+    window.onload = () => {
+      const savedTheme = localStorage.getItem('siteTheme') || 'theme-dark';
+      document.body.className = savedTheme;
+    };
+  </script>
+</head>
+<body>
+  <h1>Solo's CrazyCattle Port</h1>
+  <iframe id="gameFrame" src="https://e-learning.7s.com.tr/gsrc/crazycattle/index.html"></iframe>
+  <div class="button-container">
+    <button class="control-button" onclick="fullscreenIframe()">Fullscreen</button>
+    <a href="se.html" class="control-button">Choose Theme</a>
+  </div>
+
+  <script>
+    function fullscreenIframe() {
+      const iframe = document.getElementById('gameFrame');
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
